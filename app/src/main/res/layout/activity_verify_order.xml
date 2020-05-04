@@ -11,6 +11,7 @@
         android:id="@+id/total2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
         android:layout_marginBottom="300dp"
         android:gravity="center"
         android:text="@string/total2"

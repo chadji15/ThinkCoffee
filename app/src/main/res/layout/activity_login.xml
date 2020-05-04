@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Remember me"
-            android:textColorHint="#3e4a59"
+            android:textColor="@color/grey"
             android:layout_marginTop="10dp"
             />
 
