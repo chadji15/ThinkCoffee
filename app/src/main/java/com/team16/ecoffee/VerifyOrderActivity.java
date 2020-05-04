@@ -29,5 +29,8 @@ public class VerifyOrderActivity extends AppCompatActivity {
             }
         });
 
+        double total = getIntent().getExtras().getDouble("price");
+        findViewById(R.id.total2).setText("Total: " + total);
+
     }
 }

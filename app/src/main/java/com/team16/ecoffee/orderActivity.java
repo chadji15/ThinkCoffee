@@ -56,6 +56,9 @@ public class orderActivity extends AppCompatActivity {
         checkout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(orderActivity.this, VerifyOrderActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putDouble("price", total);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
