@@ -11,7 +11,7 @@
         android:id="@+id/total2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="300dp"
         android:gravity="center"
         android:text="@string/total2"
         android:textColor="@color/grey"
@@ -69,82 +69,7 @@
         app:layout_constraintTop_toBottomOf="@id/verify">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/item_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/rect1"
-                android:orientation="vertical"
-                android:paddingLeft="18dp"
-                android:paddingTop="0dp"
-                android:paddingRight="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Freddo Espresso, Large, No Sugar"
-                    android:textAppearance="@style/Product" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="€1.90"
-                    android:textAppearance="@style/Price"
-                    android:theme="@style/Price" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/item_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/rect1"
-                android:orientation="vertical"
-                android:paddingLeft="18dp"
-                android:paddingTop="0dp"
-                android:paddingRight="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_1">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Freddo Espresso, Medium, 1 Sugar"
-                    android:textAppearance="@style/Product" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="€1.90"
-                    android:textAppearance="@style/Price"
-                    android:theme="@style/Price" />
-
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

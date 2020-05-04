@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:background="#00000000"
-            android:hint="If the transaction is approved,a purchase will appear in your bank statement under the name WWW.COFFEEBERRY.ECOFFEE."
+            android:hint="If the transaction is approved,a purchase will appear in your bank statement under the name WWW.THINK.ECOFFEE."
             android:textAlignment="center"
             android:textColorHint="#3e4a59"
             android:textSize="14sp"

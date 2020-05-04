@@ -168,12 +168,12 @@
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
+
                 <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male" />
-
 
                 <RadioButton
                     android:layout_width="wrap_content"
