@@ -17,7 +17,6 @@ public class MainMenu extends AppCompatActivity {
         order = findViewById(R.id.order);
         credit = findViewById(R.id.credit);
         about = findViewById(R.id.about);
-        history = findViewById(R.id.history);
         logout = findViewById(R.id.logout);
         order.setOnClickListener(new View.OnClickListener(){
                                       public void onClick(View v){
@@ -37,12 +36,7 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        history.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainMenu.this, activity_history.class);
-                startActivity(intent);
-            }
-        });
+
         logout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(MainMenu.this, LoginActivity.class);
