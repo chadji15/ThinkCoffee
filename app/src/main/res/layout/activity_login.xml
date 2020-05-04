@@ -83,7 +83,7 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="106dp" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/editText"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

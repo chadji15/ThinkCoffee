@@ -5,11 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView forgot, login, create,name,pass;
+    AutoCompleteTextView name;
+    TextView forgot, create,login,pass;
+    CheckBox remember;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         name = findViewById(R.id.editText);
         pass =findViewById(R.id.editText2);
         create = findViewById(R.id.create_acc);
+        remember = findViewById(R.id.ch_rememberme);
         forgot.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(LoginActivity.this, forgotpass1.class);
@@ -27,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         });
         login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                if (remember.isChecked())
+                    newProduct();
                 Intent intent = new Intent(LoginActivity.this, MainMenu.class);
                 startActivity(intent);
             }
@@ -37,12 +48,26 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
+        final MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+        ArrayList<String> users = dbHandler.returnUsers();
+        ArrayAdapter autocompletetextAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_dropdown_item_1line, users);
 
+        name.setAdapter(autocompletetextAdapter);
 
+        name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick (AdapterView<?> parent, View view, int position, long id) {
+            Data a = dbHandler.findUser(name.getText().toString());
+            if (a==null) return;
+            pass.setText(a.getPass());
+            }
+
+        });
     }
 
-    public void newProduct (View view) {
+    public void newProduct () {
         MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
         String productName = name.getText().toString();
         String quantity = pass.toString();

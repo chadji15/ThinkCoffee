@@ -44,7 +44,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="€7,65"
+            android:text="€0,00"
             android:textColor="#3e4a59"
             android:textSize="36sp"
             android:textStyle="bold"

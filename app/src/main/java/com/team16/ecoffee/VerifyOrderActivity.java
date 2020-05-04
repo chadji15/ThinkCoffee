@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class VerifyOrderActivity extends AppCompatActivity {
     ImageButton back;
@@ -30,7 +31,7 @@ public class VerifyOrderActivity extends AppCompatActivity {
         });
 
         double total = getIntent().getExtras().getDouble("price");
-        findViewById(R.id.total2).setText("Total: " + total);
-
+        TextView hi = findViewById(R.id.total2);
+        hi.setText(String.format("Total: €%.2f", total));
     }
 }

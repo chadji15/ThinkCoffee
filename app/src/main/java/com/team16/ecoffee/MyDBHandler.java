@@ -8,6 +8,8 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class MyDBHandler extends SQLiteOpenHelper {
     //Σταθερές για τη ΒΔ (όνομα ΒΔ, έκδοση, πίνακες κλπ)
     private static final int DATABASE_VERSION = 1;
@@ -109,16 +111,19 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
 
-    public String[] returnUsers() {
+    public ArrayList<String> returnUsers() {
         String query = "SELECT " + COLUMN_PRODUCTNAME + " FROM " + TABLE_PRODUCTS ;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-        String[] users = new String[cursor.getCount()];
-        for(int i = 0; i < users.length; i++){
-            cursor.moveToNext();
-            users[i] = cursor.getString(1);
-        }
+        ArrayList<String> users = new ArrayList<>();
+        cursor.moveToFirst();
+        do{
+
+            users.add(cursor.getString(0));
+        }while(cursor.moveToNext());
+
         db.close();
+
         return users;
     }
 
