@@ -51,7 +51,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="With more than 120 stores in Greece, Cyprus and Egypt to date, and ongoing deals for overseas markets, the impressive expansion of Coffee Berry's network of stores in just 4 years is a result of hard work, strategy and know-how."
+                    android:hint="With more than 120 stores in Greece, Cyprus and Egypt to date, and ongoing deals for overseas markets, the impressive expansion of Think's network of stores in just 4 years is a result of hard work, strategy and know-how."
                     android:textSize="13sp"
                     android:textColorHint="#3e4a59"
                     android:background="#00000000"
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:background="#00000000"
-                    android:hint="Our goal is to provide an unparalleled taste and aesthetic experience to the consumer, excellent and consistent quality in all stores and carefully selected products and new varieties of coffee, covering our most demanding customers. The best coffee at Coffee Berry is the coffee that every one of our customers enjoys, and that is our philosophy every day for everyone who chooses us! Coffee Berry! The best moment of your day!"
+                    android:hint="Our goal is to provide an unparalleled taste and aesthetic experience to the consumer, excellent and consistent quality in all stores and carefully selected products and new varieties of coffee, covering our most demanding customers. The best coffee at Think is the coffee that every one of our customers enjoys, and that is our philosophy every day for everyone who chooses us! Think! The best moment of your day!"
                     android:textColorHint="#3e4a59"
                     android:textSize="13sp" />
 
