@@ -67,7 +67,6 @@ public class SignUp extends AppCompatActivity {
 
                 int selected=rbg.getCheckedRadioButtonId();
                 RadioButton gender=(RadioButton) findViewById(selected);
-                Toast.makeText(getApplicationContext(),gender.getText(), Toast.LENGTH_SHORT).show();
             }
         });
         go.setOnClickListener(new View.OnClickListener(){
