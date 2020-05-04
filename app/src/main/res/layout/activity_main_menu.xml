@@ -14,9 +14,9 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/think" />
 
         <TextView
             android:id="@+id/order"
@@ -34,22 +34,6 @@
             tools:layout_editor_absoluteX="-16dp"
             tools:layout_editor_absoluteY="219dp" />
 
-
-        <TextView
-            android:id="@+id/history"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/rect1"
-            android:gravity="center"
-            android:text="HISTORY"
-            android:textColor="#ffffff"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="324dp" />
 
         <TextView
             android:id="@+id/credit"
