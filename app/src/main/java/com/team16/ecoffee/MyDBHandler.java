@@ -116,11 +116,10 @@ public class MyDBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         ArrayList<String> users = new ArrayList<>();
-        cursor.moveToFirst();
-        do{
+        while(cursor.moveToNext()){
 
             users.add(cursor.getString(0));
-        }while(cursor.moveToNext());
+        }
 
         db.close();
 
