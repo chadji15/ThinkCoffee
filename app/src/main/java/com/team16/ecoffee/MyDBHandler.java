@@ -110,7 +110,6 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return result;
     }
 
-
     public ArrayList<String> returnUsers() {
         String query = "SELECT " + COLUMN_PRODUCTNAME + " FROM " + TABLE_PRODUCTS ;
         SQLiteDatabase db = this.getWritableDatabase();

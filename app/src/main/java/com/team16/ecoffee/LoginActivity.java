@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v){
                 if (remember.isChecked())
                     newProduct();
+                else
+                    forgetUser();
                 Intent intent = new Intent(LoginActivity.this, MainMenu.class);
                 startActivity(intent);
             }
@@ -62,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             Data a = dbHandler.findUser(name.getText().toString());
             if (a==null) return;
             pass.setText(a.getPass());
+            remember.setChecked(true);
             }
 
         });
@@ -76,6 +79,19 @@ public class LoginActivity extends AppCompatActivity {
             if (found == null){
                 Data product = new Data(name.getText().toString(),pass.getText().toString());
                 dbHandler.addUser(product);
+                name.setText("");
+                pass.setText("");
+            }
+        }
+    }
+
+    public void forgetUser(){
+        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+        String uname = name.getText().toString();
+        if (!uname.equals("")){
+            Data found = dbHandler.findUser(uname);
+            if (found != null){
+                dbHandler.deleteUser(found.getDataName());
                 name.setText("");
                 pass.setText("");
             }
